@@ -21,10 +21,10 @@ static def computeVersionName(versionCode, label) {
 final JavaVersion JAVA_VERSION = JavaVersion.VERSION_17
 
 android {
-    compileSdk 35
+    compileSdk = 35
 
     compileOptions {
-        coreLibraryDesugaringEnabled true
+        coreLibraryDesugaringEnabled = true
 
         sourceCompatibility = JAVA_VERSION
         targetCompatibility = JAVA_VERSION
@@ -36,8 +36,8 @@ android {
 
     defaultConfig {
         applicationId 'org.wikipedia'
-        minSdk 21
-        targetSdk 35
+        minSdk = 21
+        targetSdk = 35
         versionCode 50541
         testApplicationId 'org.wikipedia.test'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -45,7 +45,7 @@ android {
 
         vectorDrawables.useSupportLibrary = true
 
-        signingConfig signingConfigs.debug
+        signingConfig = signingConfigs.debug
 
         buildConfigField "String", "DEFAULT_RESTBASE_URI_FORMAT", '"%1$s://%2$s/api/rest_v1/"'
         buildConfigField "String", "META_WIKI_BASE_URI", '"https://meta.wikimedia.org"'
@@ -58,14 +58,14 @@ android {
     }
 
     testOptions {
-        execution 'ANDROIDX_TEST_ORCHESTRATOR'
+        execution = 'ANDROIDX_TEST_ORCHESTRATOR'
         animationsDisabled = true
     }
 
     buildFeatures {
-        viewBinding true
-        buildConfig true
-        compose true
+        viewBinding = true
+        buildConfig = true
+        compose = true
     }
 
     androidResources {
@@ -118,7 +118,7 @@ android {
         }
         prod {
             versionName computeVersionName(defaultConfig.versionCode, 'r')
-            signingConfig signingConfigs.prod
+            signingConfig = signingConfigs.prod
         }
         alpha {
             versionName computeVersionName(defaultConfig.versionCode, 'alpha')
@@ -127,17 +127,17 @@ android {
         beta {
             versionName computeVersionName(defaultConfig.versionCode, 'beta')
             applicationIdSuffix '.beta'
-            signingConfig signingConfigs.prod
+            signingConfig = signingConfigs.prod
         }
         fdroid {
             versionName computeVersionName(defaultConfig.versionCode, 'fdroid')
-            signingConfig signingConfigs.prod
+            signingConfig = signingConfigs.prod
         }
         custom {
             versionName computeVersionName(defaultConfig.versionCode, customChannel)
             // next line is for injecting a custom channel value into the custom/AndroidManifest.xml
             manifestPlaceholders = [customChannel:getProperty('customChannel').toString()]
-            signingConfig signingConfigs.prod
+            signingConfig = signingConfigs.prod
         }
     }
 
@@ -150,10 +150,10 @@ android {
 
     bundle {
         language {
-            enableSplit false
+            enableSplit = false
         }
     }
-    namespace 'org.wikipedia'
+    namespace = 'org.wikipedia'
 }
 
 ksp {

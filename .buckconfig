@@ -1,0 +1,23 @@
+[repositories]
+root = .
+prelude = prelude
+
+[repository_aliases]
+config = prelude
+fbcode = prelude
+fbsource = prelude
+buck = prelude
+
+[android]
+# SDK path is defined in .buckconfig.local
+
+[parser]
+default_build_file_syntax = SKYLARK
+polyglot_parsing_enabled = true
+target_platform_detector_spec = target:root//...->prelude//platforms:default
+
+[project]
+ignore = .git, .idea, .gradle, build, app/build
+
+[buildfile]
+name = BUCK
