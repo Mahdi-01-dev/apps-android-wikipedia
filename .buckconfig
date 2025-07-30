@@ -1,23 +1,27 @@
-[repositories]
-root = .
-prelude = prelude
+[cells]
+  root = .
+  prelude = prelude
+  toolchains = toolchains
+  none = none
 
-[repository_aliases]
-config = prelude
-fbcode = prelude
-fbsource = prelude
-buck = prelude
+[cell_aliases]
+  config = prelude
+  ovr_config = prelude
+  fbcode = none
+  fbsource = none
+  fbcode_macros = none
+  buck = none
 
-[android]
-# SDK path is defined in .buckconfig.local
+# Uses a copy of the prelude bundled with the buck2 binary. You can alternatively delete this
+# section and vendor a copy of the prelude to the `prelude` directory of your project.
+[external_cells]
+  prelude = bundled
 
 [parser]
-default_build_file_syntax = SKYLARK
-polyglot_parsing_enabled = true
-target_platform_detector_spec = target:root//...->prelude//platforms:default
+  target_platform_detector_spec = target:root//...->prelude//platforms:default
 
-[project]
-ignore = .git, .idea, .gradle, build, app/build
+[build]
+  execution_platforms = prelude//platforms:default
 
-[buildfile]
-name = BUCK
+; [kotlin]
+;   kotlin_version = 1.9.25 # Automatically uses 2.1.0 which is not compatible with version 1.5.15 of the Compose Compiler

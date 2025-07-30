@@ -1,0 +1,10 @@
+{
+  "trace_id": "ad544895-f149-4c2c-b061-4be2fd846352",
+  "exit_code": 3,
+  "error_messages": [
+    "Failed to build 'root//app:app (prelude//platforms:default#200212f73efcd57d)'"
+  ],
+  "finalizing_error_messages": [
+    "'invocation recorder' failed to finalize\n\nCaused by:\n    Scribe sink not enabled (internal error)"
+  ]
+}

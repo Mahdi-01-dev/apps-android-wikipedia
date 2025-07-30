@@ -1,0 +1,10 @@
+{
+  "trace_id": "e39b5173-ce49-462a-9ee1-8a23bc74a849",
+  "exit_code": 3,
+  "error_messages": [
+    "Failed to build 'root//app:lib (cfg:<empty>#cb181d7129292cd1)'"
+  ],
+  "finalizing_error_messages": [
+    "'invocation recorder' failed to finalize\n\nCaused by:\n    Scribe sink not enabled (internal error)"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "trace_id": "136cd7f6-43d8-4fb5-af53-426f48568d4f",
+  "exit_code": 3,
+  "error_messages": [
+    "Failed to build 'toolchains//:jdk_system_image (cfg:<empty>#cb181d7129292cd1)'"
+  ],
+  "finalizing_error_messages": [
+    "'invocation recorder' failed to finalize\n\nCaused by:\n    Scribe sink not enabled (internal error)"
+  ]
+}
