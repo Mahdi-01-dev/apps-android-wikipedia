@@ -3,16 +3,16 @@
 
 remote_file(
     name = "databinding-runtime-remote",
-    out = "databinding-runtime-8.9.1.aar",
-    sha1 = "99ba679e91452933646fcfbfd90ae3dd0bb88afa",
-    url = "mvn:https://maven.google.com:androidx.databinding:databinding-runtime:aar:8.9.1",
+    out = "databinding-runtime-8.11.1.aar",
+    sha1 = "12a745a9df0ac61d3e808a095bc9b0136866963a",
+    url = "mvn:https://maven.google.com:androidx.databinding:databinding-runtime:aar:8.11.1",
 )
 
 remote_file(
     name = "databinding-runtime-sources-remote",
-    out = "databinding-runtime-8.9.1-sources.jar",
-    sha1 = "6b97d41147204db40e54e7e522d2e20eaf99d787",
-    url = "mvn:https://maven.google.com:androidx.databinding:databinding-runtime:src:8.9.1",
+    out = "databinding-runtime-8.11.1-sources.jar",
+    sha1 = "3408651e546fd3122f8f66f7e8a26a520ee113e6",
+    url = "mvn:https://maven.google.com:androidx.databinding:databinding-runtime:src:8.11.1",
 )
 
 android_prebuilt_aar(
@@ -22,9 +22,9 @@ android_prebuilt_aar(
     visibility = ["PUBLIC"],
     deps = [
         # Compile deps
+        "//app/libs/androidx/lifecycle/lifecycle-runtime:lifecycle-runtime",
         "//app/libs/androidx/databinding/databinding-common:databinding-common",
         "//app/libs/androidx/databinding/viewbinding:viewbinding",
-        "//app/libs/androidx/lifecycle/lifecycle-runtime:lifecycle-runtime",
         # Runtime deps
         "//app/libs/androidx/collection/collection:collection",
     ],

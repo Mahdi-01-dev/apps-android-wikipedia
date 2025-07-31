@@ -3,16 +3,16 @@
 
 remote_file(
     name = "viewbinding-remote",
-    out = "viewbinding-8.9.1.aar",
-    sha1 = "a73da6126c51ec2cbd7686d38bae4d73782ea877",
-    url = "mvn:https://maven.google.com:androidx.databinding:viewbinding:aar:8.9.1",
+    out = "viewbinding-8.11.1.aar",
+    sha1 = "ac6f44341b1809eb28fb59df4e19918cff189ddb",
+    url = "mvn:https://maven.google.com:androidx.databinding:viewbinding:aar:8.11.1",
 )
 
 remote_file(
     name = "viewbinding-sources-remote",
-    out = "viewbinding-8.9.1-sources.jar",
-    sha1 = "51d0be0de619283d6d15937aba11c4532903b256",
-    url = "mvn:https://maven.google.com:androidx.databinding:viewbinding:src:8.9.1",
+    out = "viewbinding-8.11.1-sources.jar",
+    sha1 = "0f9f1ab058e708703d158791742f681a81e62b58",
+    url = "mvn:https://maven.google.com:androidx.databinding:viewbinding:src:8.11.1",
 )
 
 android_prebuilt_aar(

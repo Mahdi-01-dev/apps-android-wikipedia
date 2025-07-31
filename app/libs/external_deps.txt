@@ -76,3 +76,5 @@ org.jetbrains.kotlin:kotlin-compose-compiler-plugin-embeddable:2.1.0
 org.jetbrains.kotlin:kotlin-parcelize-compiler:2.2.0
 org.jetbrains.kotlin:kotlin-parcelize-runtime:2.2.0
 androidx.databinding:databinding-runtime:8.9.1
+androidx.databinding:databinding-compiler:8.11.1
+androidx.databinding:databinding-adapters:8.11.1

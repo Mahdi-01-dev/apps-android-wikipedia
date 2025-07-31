@@ -20,6 +20,7 @@ android_library(
     language = "KOTLIN",
     annotation_processors = [
         "//app/libs/androidx/room/room-compiler:room-compiler",
+        "//app/libs/androidx/databinding/databinding-compiler:databinding-compiler",
     ],
     annotation_processor_params = [
         "room.schemaLocation=/Users/b41z33d/apps-android-wikipedia/app/schemas",
@@ -28,6 +29,7 @@ android_library(
         "//app/libs/org/jetbrains/kotlin/kotlin-serialization:kotlin-serialization": {},
         "//app/libs/org/jetbrains/kotlin/kotlin-compose-compiler-plugin-embeddable:kotlin-compose-compiler-plugin-embeddable": {},
         "//app/libs/org/jetbrains/kotlin/kotlin-parcelize-compiler:kotlin-parcelize-compiler": {},
+        "//app/libs/androidx/databinding/databinding-compiler:databinding-compiler": {},
     },
     deps = [
         ":res",
@@ -102,5 +104,9 @@ android_library(
         "//app/libs/androidx/compose/ui/ui-tooling:ui-tooling",
         "//app/libs/org/jetbrains/kotlin/kotlin-parcelize-runtime:kotlin-parcelize-runtime",
         "//app/libs/androidx/databinding/databinding-runtime:databinding-runtime",
+        "//app/libs/androidx/databinding/databinding-adapters:databinding-adapters",
+        "//app/libs/androidx/databinding/databinding-compiler-common:databinding-compiler-common",
+        "//app/libs/com/android/databinding/baseLibrary:baseLibrary",
+        "//app/libs/androidx/databinding/viewbinding:viewbinding",
     ],
 )
